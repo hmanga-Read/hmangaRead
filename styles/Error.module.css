@@ -1,0 +1,8 @@
+.errorWrap {
+  align-items: center;
+  display: flex;    
+  font-size: 6rem;
+  font-weight: 800;
+  height: 100vh;
+  justify-content: center;
+}

@@ -1,0 +1,210 @@
+.hentaiWrap {
+  align-items: center;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(2, auto);
+  justify-content: center;
+  margin-top: 10px;
+  padding: 20px;
+}
+
+@media only screen and (max-width: 800px) {
+  .hentaiWrap {
+    grid-template-columns: repeat(1, 350px);
+  }
+}
+
+@media only screen and (max-width: 404px) {
+  .hentaiWrap {
+    grid-template-columns: repeat(1, 100%);
+  }
+}
+
+.hentai {
+  display: flex;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.coverImage {
+  display: flex;
+  height: auto;
+  object-fit: cover;
+  width: 100%;
+}
+
+.title {
+  background-color: rgba(var(--color-foreground), .8);
+  bottom: 0px;
+  font-size: 1rem;
+  font-weight: 700;
+  overflow-wrap: break-word;
+  padding: 10px;
+  position: absolute;
+  transition: color .2s;
+  width: 100%;
+}
+
+.title:hover {
+  color: rgb(var(--color-accent));
+}
+
+.entryBody {
+  overflow-wrap: anywhere;
+}
+
+.const {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 10px 0;
+}
+
+.elongedConst {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 10px 0;
+}
+
+.tags {
+  background-color: rgb(var(--color-foreground));
+  border-radius: 5px;
+  display: inline-flex;
+  gap: 4px;  
+  margin: 4px;
+  padding: 2px 8px;
+}
+
+.purpleTags {
+  transition: background-color .4s;
+}
+
+.purpleTags:hover {
+  background-color: rgb(var(--color-accent));
+}
+
+.artistImage {
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.thumbWrap {
+  padding: 20px;
+  padding-top: 0;
+  position: relative;
+}
+
+.thumbs {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 165px);
+  justify-content: center;
+}
+
+.thumb {
+  display: flex;
+  height: 100%;
+  position: relative;
+}
+
+.thumbImage {
+  display: grid;
+  filter: brightness(1);
+  height: auto;
+  object-fit: cover;
+  transition: filter .4s;
+  width: 100%;
+}
+
+.thumbImage:hover {
+  filter: brightness(.8);
+}
+
+.loadMoreWrap {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(2, auto);
+  justify-content: center;
+  padding-top: 20px;
+  width: 100%;
+}
+
+@media only screen and (max-width: 445px) {
+  .loadMoreWrap {
+    grid-template-columns: repeat(1, auto);
+  }
+}
+
+.loadMore {
+  background-color: rgb(var(--color-foreground)); 
+  border-radius: 8px;
+  color: rgb(var(--color-text));
+  transition: background-color .4s;
+}
+
+.loadMore:hover {
+  background-color: rgb(var(--color-accent));
+}
+
+.entriesWrap {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(auto-fill, 180px);
+  padding-top: 10px;
+}
+
+@media only screen and (max-width: 560px) {
+  .entriesWrap {
+    grid-template-columns: repeat(2, calc(50% - 5px));
+  }
+
+  .thumbs {
+    grid-template-columns: repeat(2, 50%);
+  }
+}
+
+@media (min-width: 560px) and (max-width: 735px) {
+  .entriesWrap {
+    grid-template-columns: repeat(3, calc(33.3% - 5px));
+  }
+
+  .thumbs {
+    grid-template-columns: repeat(3, 33.3%);
+  }
+}
+
+@media (min-width: 735px) and (max-width: 910px) {
+  .entriesWrap {
+    grid-template-columns: repeat(4, calc(25% - 8px));
+  }
+
+  .thumbs {
+    grid-template-columns: repeat(4, 25%);
+  }
+}
+
+@media (min-width: 910px) and (max-width: 1085px) {
+  .entriesWrap {
+    grid-template-columns: repeat(5, calc(20% - 8px));
+  }
+
+  .thumbs {
+    grid-template-columns: repeat(5, 20%);
+  }
+}
+
+@media (min-width: 1085px) and (max-width: 1260px) { 
+  .entriesWrap {
+    grid-template-columns: repeat(6, calc(16.6% - 8px));
+  }
+
+  .thumbs {
+    grid-template-columns: repeat(6, 16.6%);
+  }
+}
+
+.entry {
+  display: flex;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}

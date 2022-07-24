@@ -1,0 +1,32 @@
+.readWrap {
+  padding-bottom: 80px;
+}
+
+.read {
+  display: grid;
+}
+
+.readImageWrap {
+  height: auto;
+  position: relative;
+  width: 100%;
+}
+
+.readImage {
+  height: auto;
+  object-fit: cover;
+  position: relative;
+  width: 100%;
+}
+
+.goBack {
+  bottom: 20px;
+  font-size: 4rem;
+  left: 20px;
+  position: fixed;
+  transition: color .2s;
+}
+
+.goBack:hover {
+  color: rgb(var(--color-accent));
+}
